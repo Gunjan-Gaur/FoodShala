@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 100px 100px 100px 100px;
+} 
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+</style>
+</head>
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+
+<body>
+<div class="container">
+  <form action="loginDB.jsp">
+    <div class="row">
+      <h2 style="text-align:center">LOGIN</h2>
+      <div class="col">
+
+        <input type="text" name="email" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" id="myInput" required>
+        <div style="display: inline-flex; width:100px; font-size: 15px;">
+        <input type="checkbox" onclick="myFunction()" style="padding-left:200px;">Show Password
+        </div>
+        <input type="submit" value="Login">
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <button type="button" style="color:white; background-color: gray;" class="btn" onclick="document.getElementById('id').style.display='block'">Sign up</button>
+       <div id="id" class="modal">
+	
+     <form class="modal-content animate">
+    
+      <div class="container slideanim">
+      <label for="phone"><b>Phone Number</b></label>
+      <input type="text" placeholder="Enter phone" id="phone" name="phone">
+      <button type="button" onclick="SendOtp()">Send OTP</button>
+      <br>
+      </div>
+      <div id="check"  style="display:none">
+      <input type="text" placeholder="Enter otp" id="otp" name="otp">
+      <button type="button" onclick="verifyOtp()">Submit</button>
+      </div>
+  </form>
+</div>
+
+    </div>
+    <div class="col">
+      <form action="forgetoption.jsp">
+      <button type="submit" style="color:white; background-color: gray;" class="btn">Forgot password?</button>
+       </form>
+    </div>
+ 
+  </div>
+</div>
+
+</body>
+<script type="text/javascript">
+	// Get the modal
+var modal = document.getElementById('id');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+<script type="text/javascript">
+var k=new XMLHttpRequest();
+function verifyOtp()
+{	
+ 	  var x= document.getElementById("otp").value;
+    alert(x);
+    k.open("get","otpprocess.jsp?otpvalue="+x);
+    k.onreadystatechange=nextfun;
+    k.send();
+}
+function nextfun()
+{
+     
+    if(k.readyState==4 && k.status==200)
+    {
+        var i = k.responseText;
+        alert(i);
+        if(i==1)
+        {
+           alert("gunjan");
+           window.location.href="upsign.html";
+        }
+        else
+        {
+            alert("Wrong Otp");
+        }
+    }
+}
+</script>
+
+<script type="text/javascript">
+var v=new XMLHttpRequest();
+function SendOtp()
+{
+    var y= document.getElementById("phone").value;
+    alert("sendotp");
+    v.open("post","process.jsp?phone="+y);
+    v.onreadystatechange=Result;
+    v.send();
+}
+function Result()
+{
+	if(v.readyState==4 && v.status==200)
+    {
+        document.getElementById("check").style.display="block";
+    }
+}
+</script>
+
+</html>

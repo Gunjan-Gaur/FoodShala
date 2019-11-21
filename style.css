@@ -1,0 +1,124 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.border-3 {
+  border-left: 5px solid red;
+  background-image: linear-gradient(to right , #e0e0d1 , #ffffff);
+  padding-left: 5px;
+}
+.container{
+ margin-left: 5px; 
+} 
+footer {
+  background: #e0e0d1;
+}
+th,td {
+    border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+tr:hover{
+  background-color: #f2f2f2;
+
+}
+
+.hover-1:hover {
+ background-color: #f2f2f2;  
+}
+
+.weatherwidget-io{
+  height:300px;
+  width:206px;
+}
+
+
+
+.zoom {
+  transition: transform .2s;
+  }
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+.rounded-circle{
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+ 
+ .bookmark-1{
+  float:right;
+  padding-top: 10px;
+   }
+
+.rounded-circle-1{
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 200%;
+}
+.parallax {
+  /* The image used */
+  
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.active-pink .fa, .active-pink-2 .fa {
+color: #f48fb1;
+}
+
+.active-pink input[type=text] {
+border-bottom: 1px solid #f48fb1;
+box-shadow: 0 1px 0 0 #f48fb1;
+}
+
+.clearfix {
+  overflow: auto;
+}
